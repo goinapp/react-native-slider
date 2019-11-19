@@ -200,7 +200,7 @@ export default class Slider extends PureComponent {
     });
   }
 
-  componentDidUpdate(nextProps) {
+  componentDidUpdate(prevProps) {
     const oldValue = prevProps.value;
     const newValue = this.props.value;
 
