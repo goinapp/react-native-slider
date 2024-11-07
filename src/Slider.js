@@ -143,6 +143,8 @@ export default class Slider extends PureComponent {
      */
     thumbImage: ImagePropTypes.source,
 
+    thumbImageStyle: ImagePropTypes.style,
+
     /**
      * Set this to true to visually see the thumb touch rect in green.
      */
@@ -520,11 +522,11 @@ export default class Slider extends PureComponent {
   };
 
   _renderThumbImage = () => {
-    const { thumbImage } = this.props;
+    const { thumbImage, thumbImageStyle } = this.props;
 
     if (!thumbImage) return;
 
-    return <Image source={thumbImage} />;
+    return <Image source={thumbImage} style={thumbImageStyle} />;
   };
 }
 
